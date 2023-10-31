@@ -15,3 +15,36 @@
   first_name: Eli
   middle_name: M
   last_name: James
+---
+- !ruby/object:Contact
+  phone_numbers:
+  - !ruby/object:PhoneNumber
+    kind: Home
+    number: 123-456-7890
+  addresses:
+  - !ruby/object:Address
+    kind: Home
+    street_1: 123 Marginal Way
+    street_2: ''
+    city: South Portland
+    state: ME
+    postal_code: '04106'
+  first_name: Eli
+  middle_name: M
+  last_name: James
+- !ruby/object:Contact
+  phone_numbers:
+  - !ruby/object:PhoneNumber
+    kind: Home
+    number: 123-654-0987
+  addresses:
+  - !ruby/object:Address
+    kind: Home
+    street_1: 345 Ruth Rd
+    street_2: ''
+    city: River Town
+    state: NT
+    postal_code: '09876'
+  first_name: Nick
+  middle_name: F.
+  last_name: Lam

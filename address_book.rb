@@ -10,14 +10,13 @@ class AddressBook
   end
 
   def open
-    if File.exists?("contacts.yml")
-      #@contacts = YAML.safe_load("contacts.yml")
-      @contacts = YAML.safe_load("contacts.yml", permitted_classes: [Contact])
+    if File.exist?("contacts.yml")
+      @contacts = YAML.safe_load_file("contacts.yml", permitted_classes: [Contact, PhoneNumber, Address])
     end
   end
 
   def save
-    File.open("contacts.yml", "w") do | file |
+    File.open("contacts.yml", "a+") do | file |
       file.write(contacts.to_yaml)
     end
   end
